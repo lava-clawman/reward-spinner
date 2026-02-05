@@ -184,7 +184,7 @@ export default function App() {
 
       {/* Admin/Debug Corner */}
       <div className="fixed bottom-4 left-4 z-50">
-        <button onClick={() => setShowAdmin(!showAdmin)} className="opacity-30 hover:opacity-100 transition-opacity">
+        <button onClick={() => setShowAdmin(!showAdmin)} className="bg-white/20 p-2 rounded-full opacity-70 hover:opacity-100 transition-opacity">
             <Settings size={20} />
         </button>
         {showAdmin && (
