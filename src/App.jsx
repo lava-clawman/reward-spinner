@@ -15,6 +15,7 @@ export default function App() {
   });
   const [showLoot, setShowLoot] = useState(false);
   const [showAdmin, setShowAdmin] = useState(false);
+  const [testMode, setTestMode] = useState(false); // 测试模式：绕过时间限制
   
   // Persist Data
   useEffect(() => {
@@ -60,6 +61,11 @@ export default function App() {
   const currentSpinnerConfig = SPINNERS[selectedSpinnerId];
   
   const isLocked = (() => {
+    // 测试模式下不锁定任何转盘（除了奖励转盘仍需完成任务）
+    if (testMode) {
+      if (selectedSpinnerId === 'reward') return !data.specialTaskComplete;
+      return false;
+    }
     if (selectedSpinnerId === 'reward') return !data.specialTaskComplete;
     if (activeMode === 'sleep') return true;
     if (activeMode === 'morning' && selectedSpinnerId === 'owl') return true; // Owl only at night
@@ -185,11 +191,15 @@ export default function App() {
             <div className="bg-black/80 p-4 rounded mt-2 text-xs backdrop-blur-md border border-white/10">
                 <p>Hour: {hour}</p>
                 <label className="flex items-center gap-2 mt-2 cursor-pointer">
+                    <input type="checkbox" checked={testMode} onChange={() => setTestMode(!testMode)} />
+                    🧪 Test Mode (bypass time)
+                </label>
+                <label className="flex items-center gap-2 mt-2 cursor-pointer">
                     <input type="checkbox" checked={data.specialTaskComplete} onChange={toggleSpecialTask} />
                     Special Task Complete
                 </label>
                 <div className="mt-2 text-gray-400">
-                    Use this to simulate task completion.
+                    Use this to test spinners at any time.
                 </div>
             </div>
         )}
