@@ -1,16 +1,30 @@
-# React + Vite
+# Reward Spinner 🎡
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A specialized reward system for Flash's son, featuring Sparrow (Morning), Owl (Evening), and Golden (Reward) spinners!
 
-Currently, two official plugins are available:
+## 🔗 Quick Links
+- **Live App:** [https://reward-spinner-171.pages.dev](https://reward-spinner-171.pages.dev)
+- **Repo:** [https://github.com/lava-clawman/reward-spinner](https://github.com/lava-clawman/reward-spinner)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Features
+- **Sparrow Mode (Morning):** Bright and cheerful, rewards accumulate to loot bag.
+- **Owl Mode (Evening):** Dark mode, bigger screen time rewards available.
+- **Special Tasks:** Parents can unlock the **Golden Reward Spinner** for big prizes.
+- **Loot Bag:** Tracks rewards won for later redemption.
 
-## React Compiler
+## 🛠 Tech Stack
+- React + Vite
+- Tailwind CSS (v4)
+- Framer Motion (Animations)
+- Cloudflare Pages (Hosting)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 Development
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📝 Rules (from Flash)
+- **Sparrow (6am-3pm):** Homework, Percy, Screen 10m, Math.
+- **Owl (3pm-8pm):** Percy, Screen 10m, Screen 1h, Math.
+- **Reward (Unlock):** Screen 1h, Screen 10m, Percy, Homework, Jackpot.
